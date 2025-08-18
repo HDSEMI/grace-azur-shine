@@ -2,39 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Grace Azur Services Design System - Inspired by luxury hospitality */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
 
 @layer base {
   :root {
+    /* Grace Azur Brand Colors */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    --foreground: 0 0% 20%;
+    
+    /* Bleu Azur - Primary Brand Color */
+    --primary: 203 65% 49%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 203 65% 85%;
+    --primary-dark: 203 65% 35%;
+    
+    /* Elegant Grays */
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 20%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    
+    /* Environmental Green */
+    --accent: 120 39% 54%;
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 120 39% 85%;
+    
+    /* Cards & UI */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    --card-foreground: 0 0% 20%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
+    --popover-foreground: 0 0% 20%;
+    
+    /* Interactive Elements */
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 203 65% 49%;
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Grace Azur Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(203 65% 49% / 0.95), hsl(203 65% 35% / 0.9));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(0 0% 98%));
+    --gradient-service: linear-gradient(180deg, hsl(203 65% 49%), hsl(203 65% 40%));
+    --gradient-eco: linear-gradient(135deg, hsl(120 39% 54%), hsl(120 39% 45%));
+    
+    /* Luxury Shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(203 65% 49% / 0.2);
+    --shadow-card: 0 4px 20px -4px hsl(0 0% 0% / 0.1);
+    --shadow-hover: 0 8px 40px -8px hsl(203 65% 49% / 0.3);
+    
+    /* Premium Animations */
+    --transition-elegant: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s ease-out;
 
     --radius: 0.5rem;
 
@@ -100,6 +121,78 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body;
+  }
+  
+  /* Grace Azur Typography */
+  .font-title { font-family: 'Arial Rounded MT Bold', Arial, sans-serif; }
+  .font-body { font-family: 'Open Sans', 'Roboto', sans-serif; }
+}
+
+@layer utilities {
+  /* Grace Azur Custom Utilities */
+  .gradient-hero { background: var(--gradient-hero); }
+  .gradient-card { background: var(--gradient-card); }
+  .gradient-service { background: var(--gradient-service); }
+  .gradient-eco { background: var(--gradient-eco); }
+  
+  .shadow-elegant { box-shadow: var(--shadow-elegant); }
+  .shadow-card { box-shadow: var(--shadow-card); }
+  .shadow-hover { box-shadow: var(--shadow-hover); }
+  
+  .transition-elegant { transition: var(--transition-elegant); }
+  .transition-smooth { transition: var(--transition-smooth); }
+  
+  /* Grace Azur Animations */
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  
+  .animate-scale-in {
+    animation: scaleIn 0.4s ease-out forwards;
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+@layer components {
+  /* Grace Azur Button Variants */
+  .btn-hero {
+    @apply bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-lg font-medium text-lg shadow-elegant hover:shadow-hover transition-elegant;
+  }
+  
+  .btn-eco {
+    @apply bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-3 rounded-lg font-medium shadow-card hover:shadow-hover transition-elegant;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-6 py-3 rounded-lg font-medium transition-elegant;
+  }
+  
+  /* Service Cards */
+  .service-card {
+    @apply bg-card rounded-xl shadow-card hover:shadow-hover transition-elegant p-6 border border-border/50;
+  }
+  
+  /* Luxury Section */
+  .luxury-section {
+    @apply py-20 px-4 relative overflow-hidden;
+  }
+}
+
+/* Keyframes for Grace Azur */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
