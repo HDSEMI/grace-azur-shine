@@ -21,17 +21,19 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center text-white">
         <div className="max-w-4xl mx-auto animate-fade-up">
-          {/* Main Heading */}
-          <h1 className="font-title text-5xl md:text-7xl font-bold mb-6">
-            <span className="block">GRACE</span>
-            <span className="block text-primary-light">AZUR</span>
-            <span className="block text-3xl md:text-4xl font-body font-light mt-2">Services</span>
+          {/* Main Heading - SEO H1 */}
+          <h1 className="font-title text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            <span className="block text-white">Service de Nettoyage</span>
+            <span className="block text-primary-light">Airbnb & Particuliers</span>
+            <span className="block text-2xl md:text-3xl font-body font-light mt-4 text-white/90">
+              sur la Côte d'Azur
+            </span>
           </h1>
 
           {/* Slogan */}
           <p className="text-xl md:text-2xl font-body font-light mb-8 text-white/90 leading-relaxed">
-            Des services de nettoyage dignes d'un hôtel,<br />
-            <span className="font-medium">pour vos hôtes et vos espaces</span>
+            Nettoyage professionnel à Antibes, Cannes et Côte d'Azur<br />
+            <span className="font-medium">Qualité hôtelière • Gestion du linge • Consommables inclus</span>
           </p>
 
           {/* Key Features */}
