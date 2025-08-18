@@ -32,9 +32,9 @@ const Header = () => {
             <button onClick={() => scrollToSection('services')} className="font-body text-foreground hover:text-primary transition-smooth">
               Services
             </button>
-            <button onClick={() => scrollToSection('apropos')} className="font-body text-foreground hover:text-primary transition-smooth">
+            <a href="/about" className="font-body text-foreground hover:text-primary transition-smooth">
               À propos
-            </button>
+            </a>
             <button onClick={() => scrollToSection('environnement')} className="font-body text-foreground hover:text-primary transition-smooth">
               Environnement
             </button>
@@ -73,9 +73,9 @@ const Header = () => {
               <button onClick={() => scrollToSection('services')} className="text-left font-body text-foreground hover:text-primary transition-smooth">
                 Services
               </button>
-              <button onClick={() => scrollToSection('apropos')} className="text-left font-body text-foreground hover:text-primary transition-smooth">
+              <a href="/about" className="text-left font-body text-foreground hover:text-primary transition-smooth">
                 À propos
-              </button>
+              </a>
               <button onClick={() => scrollToSection('environnement')} className="text-left font-body text-foreground hover:text-primary transition-smooth">
                 Environnement
               </button>
