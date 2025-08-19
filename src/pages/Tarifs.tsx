@@ -6,6 +6,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import heroApartment from '@/assets/hero-apartment.jpg';
 
 const Tarifs = () => {
   const { toast } = useToast();
@@ -78,25 +79,34 @@ const Tarifs = () => {
       
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="luxury-section bg-gradient-to-br from-primary/5 via-background to-accent/5">
-          <div className="container mx-auto px-4">
+        <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+          {/* Background Image */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url(${heroApartment})` }}
+          >
+            <div className="absolute inset-0 gradient-hero" />
+          </div>
+
+          {/* Content */}
+          <div className="relative z-10 container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center animate-fade-up">
-              <h1 className="font-title text-4xl md:text-6xl font-bold text-primary mb-6">
+              <h1 className="font-title text-4xl md:text-6xl font-bold text-white mb-6">
                 Nos Tarifs
               </h1>
-              <p className="font-body text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
+              <p className="font-body text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
                 Une tarification transparente et personnalisée pour chaque client sur la Côte d'Azur
               </p>
               <div className="flex flex-wrap justify-center gap-4 mb-10">
-                <div className="flex items-center space-x-2 text-primary">
+                <div className="flex items-center space-x-2 text-white/80">
                   <Home className="w-5 h-5" />
                   <span className="font-body font-medium">Devis sur mesure</span>
                 </div>
-                <div className="flex items-center space-x-2 text-primary">
+                <div className="flex items-center space-x-2 text-white/80">
                   <CheckCircle className="w-5 h-5" />
                   <span className="font-body font-medium">Pas de frais cachés</span>
                 </div>
-                <div className="flex items-center space-x-2 text-primary">
+                <div className="flex items-center space-x-2 text-white/80">
                   <Star className="w-5 h-5" />
                   <span className="font-body font-medium">Réponse sous 24h</span>
                 </div>
