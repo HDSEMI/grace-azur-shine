@@ -3,6 +3,8 @@ import { Button } from '@/components/ui/button';
 import heroApartment from '@/assets/hero-apartment.jpg';
 
 const Hero = () => {
+  console.log('Hero component rendering');
+  
   const scrollToContact = () => {
     const element = document.getElementById('contact');
     element?.scrollIntoView({ behavior: 'smooth' });
