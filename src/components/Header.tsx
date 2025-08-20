@@ -16,19 +16,12 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center">
             <img 
               src="/lovable-uploads/3a1513b6-4169-4bc6-b946-89480b3739de.png" 
               alt="Grace Azur Services Logo" 
-              className="h-12 w-12"
+              className="h-16 w-auto"
             />
-            <div className="flex flex-col">
-              <div className="font-title text-xl font-bold">
-                <span className="text-primary">GRACE</span>
-                <span className="text-foreground ml-1">AZUR</span>
-              </div>
-              <div className="text-xs text-muted-foreground font-body">Services</div>
-            </div>
           </div>
 
           {/* Desktop Navigation */}
