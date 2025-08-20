@@ -16,34 +16,41 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="font-title text-2xl font-bold">
-              <span className="text-primary">GRACE</span>
-              <span className="text-foreground ml-1">AZUR</span>
+          <div className="flex items-center space-x-3">
+            <img 
+              src="/lovable-uploads/3a1513b6-4169-4bc6-b946-89480b3739de.png" 
+              alt="Grace Azur Services Logo" 
+              className="h-12 w-12"
+            />
+            <div className="flex flex-col">
+              <div className="font-title text-xl font-bold">
+                <span className="text-primary">GRACE</span>
+                <span className="text-foreground ml-1">AZUR</span>
+              </div>
+              <div className="text-xs text-muted-foreground font-body">Services</div>
             </div>
-            <div className="text-sm text-muted-foreground font-body">Services</div>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            <button onClick={() => scrollToSection('accueil')} className="font-body text-foreground hover:text-primary transition-smooth">
+            <a href="/" className="font-body text-foreground hover:text-primary transition-smooth">
               Accueil
-            </button>
-            <button onClick={() => scrollToSection('services')} className="font-body text-foreground hover:text-primary transition-smooth">
+            </a>
+            <a href="/#services" className="font-body text-foreground hover:text-primary transition-smooth">
               Services
-            </button>
+            </a>
             <a href="/about" className="font-body text-foreground hover:text-primary transition-smooth">
               À propos
             </a>
             <a href="/tarifs" className="font-body text-foreground hover:text-primary transition-smooth">
               Tarifs
             </a>
-            <button onClick={() => scrollToSection('environnement')} className="font-body text-foreground hover:text-primary transition-smooth">
+            <a href="/#environnement" className="font-body text-foreground hover:text-primary transition-smooth">
               Environnement
-            </button>
-            <button onClick={() => scrollToSection('zone')} className="font-body text-foreground hover:text-primary transition-smooth">
+            </a>
+            <a href="/#zone" className="font-body text-foreground hover:text-primary transition-smooth">
               Zone d'intervention
-            </button>
+            </a>
           </nav>
 
           {/* Contact Info & CTA */}
@@ -52,7 +59,7 @@ const Header = () => {
               <Phone size={16} />
               <span className="font-body">06 XX XX XX XX</span>
             </div>
-            <Button onClick={() => scrollToSection('contact')} className="btn-hero">
+            <Button onClick={() => window.location.href = '/#contact'} className="btn-hero">
               Contact
             </Button>
           </div>
@@ -70,29 +77,29 @@ const Header = () => {
         {isMenuOpen && (
           <nav className="lg:hidden mt-4 pb-4 border-t border-border/50 pt-4">
             <div className="flex flex-col space-y-3">
-              <button onClick={() => scrollToSection('accueil')} className="text-left font-body text-foreground hover:text-primary transition-smooth">
+              <a href="/" className="text-left font-body text-foreground hover:text-primary transition-smooth">
                 Accueil
-              </button>
-              <button onClick={() => scrollToSection('services')} className="text-left font-body text-foreground hover:text-primary transition-smooth">
+              </a>
+              <a href="/#services" className="text-left font-body text-foreground hover:text-primary transition-smooth">
                 Services
-              </button>
+              </a>
               <a href="/about" className="text-left font-body text-foreground hover:text-primary transition-smooth">
                 À propos
               </a>
               <a href="/tarifs" className="text-left font-body text-foreground hover:text-primary transition-smooth">
                 Tarifs
               </a>
-              <button onClick={() => scrollToSection('environnement')} className="text-left font-body text-foreground hover:text-primary transition-smooth">
+              <a href="/#environnement" className="text-left font-body text-foreground hover:text-primary transition-smooth">
                 Environnement
-              </button>
-              <button onClick={() => scrollToSection('zone')} className="text-left font-body text-foreground hover:text-primary transition-smooth">
+              </a>
+              <a href="/#zone" className="text-left font-body text-foreground hover:text-primary transition-smooth">
                 Zone d'intervention
-              </button>
+              </a>
               <div className="flex items-center space-x-2 text-sm text-muted-foreground pt-2">
                 <Phone size={16} />
                 <span className="font-body">06 XX XX XX XX</span>
               </div>
-              <Button onClick={() => scrollToSection('contact')} className="btn-hero w-full">
+              <Button onClick={() => window.location.href = '/#contact'} className="btn-hero w-full">
                 Contact
               </Button>
             </div>

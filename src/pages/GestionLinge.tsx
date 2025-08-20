@@ -1,3 +1,6 @@
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import Contact from '@/components/Contact';
 import { CheckCircle, Truck, Droplets, Zap, Shirt, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import heroApartment from '@/assets/hero-apartment.jpg';
@@ -67,6 +70,7 @@ const GestionLinge = () => {
 
   return (
     <div className="min-h-screen">
+      <Header />
       {/* Hero Section */}
       <section 
         className="relative h-[60vh] flex items-center justify-center"
@@ -234,8 +238,10 @@ const GestionLinge = () => {
         </div>
       </section>
 
-      {/* Contact Section Placeholder */}
-      <div id="contact" className="py-16"></div>
+      {/* Contact Section */}
+      <Contact />
+      
+      <Footer />
     </div>
   );
 };
