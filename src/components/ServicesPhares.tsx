@@ -83,10 +83,23 @@ const ServicesPhares = () => {
                 ))}
               </div>
 
-              <Button onClick={scrollToContact} variant="outline" className="btn-outline w-full group">
-                {service.cta}
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <div className="flex space-x-3">
+                <Button 
+                  onClick={() => {
+                    if (index === 0) window.location.href = '/nettoyage-airbnb';
+                    else if (index === 1) window.location.href = '/gestion-linge';
+                    else if (index === 2) window.location.href = '/consommables';
+                  }}
+                  variant="secondary" 
+                  className="flex-1"
+                >
+                  En savoir plus
+                </Button>
+                <Button onClick={scrollToContact} variant="outline" className="btn-outline flex-1 group">
+                  {service.cta}
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </div>
             </div>
           ))}
         </div>
