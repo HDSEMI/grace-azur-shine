@@ -3,7 +3,6 @@ import Footer from '@/components/Footer';
 import Contact from '@/components/Contact';
 import { CheckCircle, Clock, Shield, Star, Sparkles, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import heroApartment from '@/assets/hero-apartment.jpg';
 
 const NettoyageAirbnb = () => {
   const scrollToContact = () => {
@@ -45,29 +44,6 @@ const NettoyageAirbnb = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      {/* Hero Section */}
-      <section 
-        className="relative h-[60vh] flex items-center justify-center"
-        style={{
-          backgroundImage: `url(${heroApartment})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-background/90"></div>
-        <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
-          <div className="flex items-center justify-center mb-6">
-            <Sparkles className="w-16 h-16 text-primary" />
-          </div>
-          <h1 className="font-title text-4xl md:text-6xl font-bold text-foreground mb-6 animate-fade-in">
-            Nettoyage Professionnel
-            <span className="block text-primary">Airbnb</span>
-          </h1>
-          <p className="font-body text-xl text-muted-foreground animate-fade-in">
-            Service complet de nettoyage entre chaque séjour pour maintenir vos locations saisonnières au plus haut niveau
-          </p>
-        </div>
-      </section>
 
       {/* Services Overview */}
       <section className="luxury-section bg-background">
