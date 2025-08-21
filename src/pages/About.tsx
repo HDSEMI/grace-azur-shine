@@ -4,7 +4,7 @@ import WhyChooseUs from '@/components/WhyChooseUs';
 import WhoWeAre from '@/components/WhoWeAre';
 import OurCommitment from '@/components/OurCommitment';
 import InterventionZones from '@/components/InterventionZones';
-import heroApartment from '@/assets/hero-apartment.jpg';
+import headerAbout from '@/assets/header-about.jpg';
 
 const About = () => {
   return (
@@ -16,7 +16,7 @@ const About = () => {
           {/* Background Image */}
           <div 
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: `url(${heroApartment})` }}
+            style={{ backgroundImage: `url(${headerAbout})` }}
           >
             <div className="absolute inset-0 gradient-hero" />
           </div>
