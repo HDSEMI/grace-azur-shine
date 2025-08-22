@@ -144,19 +144,6 @@ const Header = () => {
         </div>
       </header>
 
-      {/* Hero Image Section for specific pages */}
-      {getHeaderTitle() && (
-        <section className="relative h-80 mt-20 overflow-hidden">
-          <div className="absolute inset-0">
-            <img 
-              src={getHeaderImage()} 
-              alt={getHeaderTitle()} 
-              className="w-full h-full object-cover"
-            />
-            
-          </div>
-        </section>
-      )}
     </>
   );
 };
