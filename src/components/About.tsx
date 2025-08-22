@@ -55,15 +55,6 @@ const About = () => {
                 Une expérience où chaque détail compte, où la qualité prime sur la quantité, et où votre satisfaction 
                 est notre plus belle récompense.
               </p>
-
-              <div className="mt-8">
-                <a 
-                  href="/about" 
-                  className="inline-flex items-center px-6 py-3 bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg transition-all duration-200 font-medium"
-                >
-                  En savoir plus sur nous
-                </a>
-              </div>
             </div>
           </div>
 
