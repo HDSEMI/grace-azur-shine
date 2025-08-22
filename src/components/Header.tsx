@@ -155,13 +155,6 @@ const Header = () => {
             />
             <div className="absolute inset-0 bg-gradient-to-r from-primary/70 to-secondary/50"></div>
           </div>
-          <div className="relative z-10 flex items-center justify-center h-full">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-title font-bold text-white mb-4">
-                {getHeaderTitle()}
-              </h1>
-            </div>
-          </div>
         </section>
       )}
     </>
