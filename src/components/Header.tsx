@@ -95,7 +95,7 @@ const Header = () => {
                 <Phone size={16} />
                 <span className="font-body">06 XX XX XX XX</span>
               </div>
-              <Button onClick={() => window.location.href = '/#contact'} className="btn-hero">
+              <Button onClick={() => window.location.href = '/contact'} className="btn-hero">
                 Contact
               </Button>
             </div>
@@ -135,7 +135,7 @@ const Header = () => {
                   <Phone size={16} />
                   <span className="font-body">06 XX XX XX XX</span>
                 </div>
-                <Button onClick={() => window.location.href = '/#contact'} className="btn-hero w-full">
+                <Button onClick={() => window.location.href = '/contact'} className="btn-hero w-full">
                   Contact
                 </Button>
               </div>

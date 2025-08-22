@@ -38,28 +38,28 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="luxury-section bg-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-fade-up">
-          <h2 className="font-title text-4xl md:text-5xl font-bold text-primary mb-4">
+    <section id="contact" className="luxury-section bg-background pt-24">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12 sm:mb-16 animate-fade-up">
+          <h2 className="font-title text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-4">
             Contactez-nous
           </h2>
-          <p className="font-body text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="font-body text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Demandez votre devis gratuit et personnalisé en quelques clics
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16">
           {/* Contact Form */}
           <div className="animate-fade-up">
             <div className="service-card">
-              <h3 className="font-title text-2xl font-bold text-foreground mb-6">
+              <h3 className="font-title text-xl sm:text-2xl font-bold text-foreground mb-6">
                 Demander un devis
               </h3>
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block font-body font-medium text-foreground mb-2">
+                  <label htmlFor="name" className="block font-body font-medium text-foreground mb-2 text-sm sm:text-base">
                     Nom complet *
                   </label>
                   <Input
@@ -133,24 +133,24 @@ const Contact = () => {
             <div className="space-y-8">
               {/* Direct Contact */}
               <div className="service-card">
-                <h3 className="font-title text-2xl font-bold text-foreground mb-6">
+                <h3 className="font-title text-xl sm:text-2xl font-bold text-foreground mb-6">
                   Contact direct
                 </h3>
                 
                 <div className="space-y-4">
-                  <div className="flex items-center space-x-4 p-4 bg-primary/5 rounded-lg border border-primary/20">
-                    <Phone className="w-6 h-6 text-primary" />
+                  <div className="flex items-center space-x-3 sm:space-x-4 p-3 sm:p-4 bg-primary/5 rounded-lg border border-primary/20">
+                    <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-primary flex-shrink-0" />
                     <div>
-                      <p className="font-body font-medium text-foreground">Téléphone</p>
-                      <p className="font-body text-muted-foreground">06 XX XX XX XX</p>
+                      <p className="font-body font-medium text-foreground text-sm sm:text-base">Téléphone</p>
+                      <p className="font-body text-muted-foreground text-sm sm:text-base">06 XX XX XX XX</p>
                     </div>
                   </div>
 
-                  <div className="flex items-center space-x-4 p-4 bg-primary/5 rounded-lg border border-primary/20">
-                    <Mail className="w-6 h-6 text-primary" />
+                  <div className="flex items-center space-x-3 sm:space-x-4 p-3 sm:p-4 bg-primary/5 rounded-lg border border-primary/20">
+                    <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-primary flex-shrink-0" />
                     <div>
-                      <p className="font-body font-medium text-foreground">Email</p>
-                      <p className="font-body text-muted-foreground">contact@graceazur-services.fr</p>
+                      <p className="font-body font-medium text-foreground text-sm sm:text-base">Email</p>
+                      <p className="font-body text-muted-foreground text-sm sm:text-base break-all">contact@graceazur-services.fr</p>
                     </div>
                   </div>
 
@@ -163,30 +163,30 @@ const Contact = () => {
 
               {/* Service Info */}
               <div className="service-card">
-                <h3 className="font-title text-2xl font-bold text-foreground mb-6">
+                <h3 className="font-title text-xl sm:text-2xl font-bold text-foreground mb-6">
                   Informations pratiques
                 </h3>
                 
                 <div className="space-y-4">
-                  <div className="flex items-start space-x-4">
-                    <Clock className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
+                  <div className="flex items-start space-x-3 sm:space-x-4">
+                    <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-accent flex-shrink-0 mt-1" />
                     <div>
-                      <p className="font-body font-medium text-foreground">Horaires</p>
-                      <p className="font-body text-muted-foreground">7j/7 - Intervention rapide sous 24h</p>
+                      <p className="font-body font-medium text-foreground text-sm sm:text-base">Horaires</p>
+                      <p className="font-body text-muted-foreground text-sm sm:text-base">7j/7 - Intervention rapide sous 24h</p>
                     </div>
                   </div>
 
-                  <div className="flex items-start space-x-4">
-                    <MapPin className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
+                  <div className="flex items-start space-x-3 sm:space-x-4">
+                    <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-accent flex-shrink-0 mt-1" />
                     <div>
-                      <p className="font-body font-medium text-foreground">Zone d'intervention</p>
-                      <p className="font-body text-muted-foreground">Côte d'Azur - Alpes-Maritimes</p>
+                      <p className="font-body font-medium text-foreground text-sm sm:text-base">Zone d'intervention</p>
+                      <p className="font-body text-muted-foreground text-sm sm:text-base">Côte d'Azur - Alpes-Maritimes</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="mt-6 p-4 bg-accent/5 rounded-lg border border-accent/20">
-                  <p className="font-body text-sm text-muted-foreground">
+                <div className="mt-6 p-3 sm:p-4 bg-accent/5 rounded-lg border border-accent/20">
+                  <p className="font-body text-xs sm:text-sm text-muted-foreground">
                     <strong className="text-accent">Devis gratuit</strong> • 
                     <strong className="text-accent"> Réponse rapide</strong> • 
                     <strong className="text-accent"> Service personnalisé</strong>
