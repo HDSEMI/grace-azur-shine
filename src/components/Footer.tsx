@@ -9,10 +9,12 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div className="animate-fade-up">
-            <div className="font-title text-2xl font-bold mb-4">
-              <span className="text-primary-light">GRACE</span>
-              <span className="text-white ml-1">AZUR</span>
-              <span className="block text-lg font-body font-light">Services</span>
+            <div className="mb-4">
+              <img 
+                src="/lovable-uploads/3a1513b6-4169-4bc6-b946-89480b3739de.png" 
+                alt="Grace Azur Services" 
+                className="h-16 w-auto"
+              />
             </div>
             <p className="font-body text-white/80 leading-relaxed">
               Des services de nettoyage dignes d'un hôtel, pour vos hôtes et vos espaces. 
