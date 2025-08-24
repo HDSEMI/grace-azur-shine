@@ -1,8 +1,9 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Contact from '@/components/Contact';
-import { CheckCircle, Clock, Shield, Star, Sparkles, ArrowRight } from 'lucide-react';
+import { CheckCircle, Clock, Shield, Star, Sparkles, ArrowRight, Home, Users, Award } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import heroImage from '@/assets/hero-airbnb-cleaning.jpg';
 
 const NettoyageAirbnb = () => {
   const scrollToContact = () => {
@@ -44,6 +45,59 @@ const NettoyageAirbnb = () => {
   return (
     <div className="min-h-screen">
       <Header />
+
+      {/* Hero Section with Banner */}
+      <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={heroImage} 
+            alt="Nettoyage professionnel Airbnb" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/60" />
+        </div>
+        <div className="container mx-auto px-4 relative z-10 text-center">
+          <h1 className="font-title text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
+            Nettoyage Professionnel Airbnb
+          </h1>
+          <p className="font-body text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            Service de conciergerie haut de gamme pour maximiser vos revenus locatifs
+          </p>
+          <Button onClick={scrollToContact} className="btn-hero bg-white text-primary hover:bg-white/90 animate-scale-in" style={{ animationDelay: '0.4s' }}>
+            Obtenir un devis gratuit
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </Button>
+        </div>
+      </section>
+
+      {/* Key Features */}
+      <section className="py-16 bg-gradient-to-b from-background to-muted/20">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center animate-scale-in">
+              <div className="w-20 h-20 bg-gradient-to-br from-primary to-primary/70 rounded-2xl flex items-center justify-center text-white mx-auto mb-4 shadow-lg">
+                <Home className="w-10 h-10" />
+              </div>
+              <h3 className="font-title text-xl font-bold text-foreground mb-2">+500 Logements</h3>
+              <p className="font-body text-muted-foreground">Gérés avec excellence</p>
+            </div>
+            <div className="text-center animate-scale-in" style={{ animationDelay: '0.1s' }}>
+              <div className="w-20 h-20 bg-gradient-to-br from-accent to-accent/70 rounded-2xl flex items-center justify-center text-white mx-auto mb-4 shadow-lg">
+                <Users className="w-10 h-10" />
+              </div>
+              <h3 className="font-title text-xl font-bold text-foreground mb-2">98% Satisfaction</h3>
+              <p className="font-body text-muted-foreground">Note moyenne des hôtes</p>
+            </div>
+            <div className="text-center animate-scale-in" style={{ animationDelay: '0.2s' }}>
+              <div className="w-20 h-20 bg-gradient-to-br from-primary to-primary/70 rounded-2xl flex items-center justify-center text-white mx-auto mb-4 shadow-lg">
+                <Award className="w-10 h-10" />
+              </div>
+              <h3 className="font-title text-xl font-bold text-foreground mb-2">Certifié</h3>
+              <p className="font-body text-muted-foreground">Standards hôteliers</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Services Overview */}
       <section className="luxury-section bg-background">
