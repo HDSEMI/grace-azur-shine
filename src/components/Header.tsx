@@ -55,52 +55,48 @@ const Header = () => {
 
   return (
     <>
-      <header className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border/30 z-50 shadow-sm">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+      <header className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border/50 z-50">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex items-center justify-between">
             {/* Logo */}
-            <a href="/" className="flex items-center group">
+            <div className="flex items-center">
               <img 
                 src="/lovable-uploads/3a1513b6-4169-4bc6-b946-89480b3739de.png" 
                 alt="Grace Azur Services Logo" 
-                className="h-14 w-auto transition-transform duration-300 group-hover:scale-105"
+                className="h-16 w-auto"
               />
-              <div className="ml-3 hidden sm:block">
-                <h1 className="font-heading text-lg font-semibold text-foreground">Grace Azur</h1>
-                <p className="text-xs text-muted-foreground">Services Premium</p>
-              </div>
-            </a>
+            </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden xl:flex items-center space-x-1">
-              <a href="/" className="font-body px-4 py-2 rounded-lg text-foreground hover:bg-primary/10 hover:text-primary transition-all duration-200">
+            <nav className="hidden lg:flex items-center space-x-8">
+              <a href="/" className="font-body text-foreground hover:text-primary transition-smooth">
                 Accueil
               </a>
-              <a href="/#services" className="font-body px-4 py-2 rounded-lg text-foreground hover:bg-primary/10 hover:text-primary transition-all duration-200">
+              <a href="/#services" className="font-body text-foreground hover:text-primary transition-smooth">
                 Services
               </a>
-              <a href="/about" className="font-body px-4 py-2 rounded-lg text-foreground hover:bg-primary/10 hover:text-primary transition-all duration-200">
+              <a href="/about" className="font-body text-foreground hover:text-primary transition-smooth">
                 À propos
               </a>
-              <a href="/tarifs" className="font-body px-4 py-2 rounded-lg text-foreground hover:bg-primary/10 hover:text-primary transition-all duration-200">
+              <a href="/tarifs" className="font-body text-foreground hover:text-primary transition-smooth">
                 Tarifs
               </a>
-              <a href="/#environnement" className="font-body px-4 py-2 rounded-lg text-foreground hover:bg-primary/10 hover:text-primary transition-all duration-200">
+              <a href="/#environnement" className="font-body text-foreground hover:text-primary transition-smooth">
                 Environnement
               </a>
-              <a href="/#zone" className="font-body px-4 py-2 rounded-lg text-foreground hover:bg-primary/10 hover:text-primary transition-all duration-200">
+              <a href="/#zone" className="font-body text-foreground hover:text-primary transition-smooth">
                 Zone d'intervention
               </a>
             </nav>
 
             {/* Contact Info & CTA */}
             <div className="hidden lg:flex items-center space-x-4">
-              <a href="tel:06XXXXXXXX" className="flex items-center space-x-2 px-3 py-2 rounded-lg text-sm text-muted-foreground hover:bg-muted/50 transition-all duration-200">
-                <Phone size={18} className="text-primary" />
+              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                <Phone size={16} />
                 <span className="font-body">06 XX XX XX XX</span>
-              </a>
-              <Button onClick={() => window.location.href = '/contact'} className="btn-hero shadow-lg">
-                Obtenir un devis
+              </div>
+              <Button onClick={() => window.location.href = '/contact'} className="btn-hero">
+                Contact
               </Button>
             </div>
 
