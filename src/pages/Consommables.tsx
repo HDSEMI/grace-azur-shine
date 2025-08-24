@@ -86,26 +86,28 @@ const Consommables = () => {
       <Header />
 
       {/* Hero Section with Banner */}
-      <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src={heroImage} 
             alt="Gestion des consommables" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/60" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
         </div>
-        <div className="container mx-auto px-4 relative z-10 text-center">
-          <h1 className="font-title text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center justify-center text-center">
+          <h1 className="font-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 animate-fade-in">
             Gestion des Consommables
           </h1>
-          <p className="font-body text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <p className="font-body text-lg sm:text-xl md:text-2xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
             Approvisionnement automatique pour vos locations Airbnb
           </p>
-          <Button onClick={scrollToContact} className="btn-hero bg-white text-primary hover:bg-white/90 animate-scale-in" style={{ animationDelay: '0.4s' }}>
-            Simplifier ma gestion
-            <ArrowRight className="ml-2 w-5 h-5" />
-          </Button>
+          <div className="flex justify-center">
+            <Button onClick={scrollToContact} className="btn-hero bg-white text-primary hover:bg-white/90 animate-scale-in px-6 sm:px-8 py-3 text-base sm:text-lg" style={{ animationDelay: '0.4s' }}>
+              Simplifier ma gestion
+              <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
+            </Button>
+          </div>
         </div>
       </section>
 
