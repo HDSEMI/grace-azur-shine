@@ -4,7 +4,6 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
-
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -12,33 +11,35 @@ const Contact = () => {
     phone: '',
     message: ''
   });
-  const { toast } = useToast();
-
+  const {
+    toast
+  } = useToast();
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Simulate form submission
     toast({
       title: "Message envoyé !",
-      description: "Nous vous recontacterons dans les plus brefs délais.",
+      description: "Nous vous recontacterons dans les plus brefs délais."
     });
-    setFormData({ name: '', email: '', phone: '', message: '' });
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      message: ''
+    });
   };
-
   const openWhatsApp = () => {
     const phoneNumber = "33XXXXXXXXX"; // Replace with actual number
     const message = "Bonjour, je souhaiterais obtenir un devis pour vos services de nettoyage.";
     window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
   };
-
-  return (
-    <section id="contact" className="luxury-section bg-background pt-24">
+  return <section id="contact" className="luxury-section bg-background pt-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 sm:mb-16 animate-fade-up">
           <h2 className="font-title text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-4">
@@ -62,62 +63,28 @@ const Contact = () => {
                   <label htmlFor="name" className="block font-body font-medium text-foreground mb-2 text-sm sm:text-base">
                     Nom complet *
                   </label>
-                  <Input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full"
-                    placeholder="Votre nom et prénom"
-                  />
+                  <Input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required className="w-full" placeholder="Votre nom et prénom" />
                 </div>
 
                 <div>
                   <label htmlFor="email" className="block font-body font-medium text-foreground mb-2">
                     Email *
                   </label>
-                  <Input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full"
-                    placeholder="votre.email@exemple.com"
-                  />
+                  <Input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required className="w-full" placeholder="votre.email@exemple.com" />
                 </div>
 
                 <div>
                   <label htmlFor="phone" className="block font-body font-medium text-foreground mb-2">
                     Téléphone
                   </label>
-                  <Input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full"
-                    placeholder="06 XX XX XX XX"
-                  />
+                  <Input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} className="w-full" placeholder="06 XX XX XX XX" />
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block font-body font-medium text-foreground mb-2">
                     Message *
                   </label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    className="w-full h-32"
-                    placeholder="Décrivez votre besoin : type de logement, surface, fréquence souhaitée..."
-                  />
+                  <Textarea id="message" name="message" value={formData.message} onChange={handleChange} required className="w-full h-32" placeholder="Décrivez votre besoin : type de logement, surface, fréquence souhaitée..." />
                 </div>
 
                 <Button type="submit" className="btn-hero w-full">
@@ -142,7 +109,7 @@ const Contact = () => {
                     <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-primary flex-shrink-0" />
                     <div>
                       <p className="font-body font-medium text-foreground text-sm sm:text-base">Téléphone</p>
-                      <p className="font-body text-muted-foreground text-sm sm:text-base">06 XX XX XX XX</p>
+                      <p className="font-body text-muted-foreground text-sm sm:text-base">07 65 16 91 06</p>
                     </div>
                   </div>
 
@@ -197,8 +164,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;
