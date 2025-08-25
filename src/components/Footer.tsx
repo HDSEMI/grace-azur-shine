@@ -65,6 +65,10 @@ const Footer = () => {
                 Politique de confidentialité
               </a>
               <span className="text-white/40">|</span>
+              <a href="/mentions-legales" className="font-body text-white/60 text-sm hover:text-primary-light transition-smooth">
+                Mentions légales
+              </a>
+              <span className="text-white/40">|</span>
               <p className="font-body text-white/60 text-sm flex items-center">
                 Créé avec <Heart className="w-4 h-4 text-red-400 mx-1" /> sur la Côte d'Azur
               </p>
