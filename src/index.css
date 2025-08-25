@@ -43,7 +43,7 @@
     --destructive-foreground: 0 0% 100%;
 
     /* Grace Azur Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(203 65% 49% / 0.95), hsl(203 65% 35% / 0.9));
+    --gradient-hero: linear-gradient(135deg, hsl(203 65% 49% / 0.7), hsl(203 65% 35% / 0.6));
     --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(0 0% 98%));
     --gradient-service: linear-gradient(180deg, hsl(203 65% 49%), hsl(203 65% 40%));
     --gradient-eco: linear-gradient(135deg, hsl(120 39% 54%), hsl(120 39% 45%));
