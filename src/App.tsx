@@ -11,6 +11,7 @@ import NotFound from "./pages/NotFound";
 import NettoyageAirbnb from "./pages/NettoyageAirbnb";
 import GestionLinge from "./pages/GestionLinge";
 import Consommables from "./pages/Consommables";
+import PolitiqueConfidentialite from "./pages/PolitiqueConfidentialite";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/nettoyage-airbnb" element={<NettoyageAirbnb />} />
           <Route path="/gestion-linge" element={<GestionLinge />} />
           <Route path="/consommables" element={<Consommables />} />
+          <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

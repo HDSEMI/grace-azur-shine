@@ -55,13 +55,21 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-white/20 mt-8 pt-8 text-center">
-          <p className="font-body text-white/60 text-sm">
-            © {currentYear} Grace Azur Services. Tous droits réservés.
-          </p>
-          <p className="font-body text-white/60 text-sm mt-2 flex items-center justify-center">
-            Créé avec <Heart className="w-4 h-4 text-red-400 mx-1" /> sur la Côte d'Azur
-          </p>
+        <div className="border-t border-white/20 mt-8 pt-8">
+          <div className="text-center">
+            <p className="font-body text-white/60 text-sm">
+              © {currentYear} Grace Azur Services. Tous droits réservés.
+            </p>
+            <div className="flex items-center justify-center gap-4 mt-2">
+              <a href="/politique-confidentialite" className="font-body text-white/60 text-sm hover:text-primary-light transition-smooth">
+                Politique de confidentialité
+              </a>
+              <span className="text-white/40">|</span>
+              <p className="font-body text-white/60 text-sm flex items-center">
+                Créé avec <Heart className="w-4 h-4 text-red-400 mx-1" /> sur la Côte d'Azur
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
