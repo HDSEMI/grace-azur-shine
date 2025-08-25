@@ -122,3 +122,4 @@ export const checkEmailJSConfig = () => {
     isValid: Object.values(validations).every(v => v)
   };
 };
+
