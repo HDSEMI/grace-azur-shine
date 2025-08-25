@@ -47,7 +47,7 @@ const ServicesPhares = () => {
   ];
 
   return (
-    <section className="luxury-section bg-background">
+    <section id="services" className="luxury-section bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-up">
           <h2 className="font-title text-4xl md:text-5xl font-bold text-primary mb-4">
