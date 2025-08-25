@@ -23,7 +23,7 @@
 // Destinataire: hermann.semi@gmail.com
 
 export const EMAILJS_CONFIG = {
-  SERVICE_ID: 'service_nogz7h', // Service ID configuré
+  SERVICE_ID: 'service_ao2ipkd', // Service ID configuré et testé
   TEMPLATE_ID: 'template_z8s4kvn', // Template ID configuré
   PUBLIC_KEY: 'Qy4IcJcdo3ShqEHSv', // Public Key configuré
   TO_EMAIL: 'hermann.semi@gmail.com'

@@ -10,7 +10,7 @@ export const diagnoseEmailJS = async () => {
     
     // 2. Vérifier la configuration
     const config = {
-      serviceId: 'service_nogz7h',
+      serviceId: 'service_ao2ipkd',
       templateId: 'template_z8s4kvn',
       publicKey: 'Qy4IcJcdo3ShqEHSv'
     };
@@ -79,7 +79,7 @@ export const diagnoseEmailJS = async () => {
         original: error
       },
       config: {
-        serviceId: 'service_nogz7h',
+        serviceId: 'service_ao2ipkd',
         templateId: 'template_z8s4kvn',
         publicKey: 'Qy4IcJcdo3ShqEHSv'
       },
@@ -102,7 +102,7 @@ export const checkEmailJSConfig = () => {
   console.log('🔍 Vérification de la configuration EmailJS...');
   
   const config = {
-    serviceId: 'service_nogz7h',
+    serviceId: 'service_ao2ipkd',
     templateId: 'template_z8s4kvn',
     publicKey: 'Qy4IcJcdo3ShqEHSv'
   };

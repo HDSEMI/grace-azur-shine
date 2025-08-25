@@ -46,7 +46,7 @@ const Contact = () => {
 
       // Envoi de l'email
       const result = await emailjs.send(
-        'service_nogz7h',
+        'service_ao2ipkd',
         'template_z8s4kvn',
         templateParams,
         'Qy4IcJcdo3ShqEHSv'
@@ -72,23 +72,50 @@ const Contact = () => {
     } catch (error) {
       console.error('Erreur détaillée EmailJS:', error);
       
-      // Message d'erreur plus spécifique
+      // Analyse détaillée de l'erreur EmailJS
+      let errorTitle = "Erreur lors de l'envoi";
       let errorMessage = "Veuillez réessayer ou nous contacter directement par téléphone.";
       
       if (error instanceof Error) {
+        // Erreurs de configuration EmailJS
         if (error.message.includes('Service ID')) {
-          errorMessage = "Erreur de configuration du service EmailJS.";
+          errorTitle = "Erreur Service EmailJS";
+          errorMessage = "Le service EmailJS n'est pas configuré ou est inactif. Contactez l'administrateur.";
         } else if (error.message.includes('Template ID')) {
-          errorMessage = "Erreur de configuration du template EmailJS.";
+          errorTitle = "Erreur Template EmailJS";
+          errorMessage = "Le template EmailJS n'est pas configuré ou est inactif. Contactez l'administrateur.";
         } else if (error.message.includes('Public Key')) {
-          errorMessage = "Erreur de configuration de la clé EmailJS.";
+          errorTitle = "Erreur Clé EmailJS";
+          errorMessage = "La clé publique EmailJS est invalide ou désactivée. Contactez l'administrateur.";
+        } else if (error.message.includes('quota')) {
+          errorTitle = "Quota EmailJS dépassé";
+          errorMessage = "Limite d'emails atteinte pour aujourd'hui. Réessayez demain ou contactez-nous par téléphone.";
+        } else if (error.message.includes('network') || error.message.includes('fetch')) {
+          errorTitle = "Erreur de connexion";
+          errorMessage = "Problème de connexion internet ou serveur EmailJS temporairement indisponible.";
+        } else if (error.message.includes('400')) {
+          errorTitle = "Erreur de requête";
+          errorMessage = "Paramètres de l'email invalides. Vérifiez vos informations et réessayez.";
+        } else if (error.message.includes('500')) {
+          errorTitle = "Erreur serveur EmailJS";
+          errorMessage = "Problème temporaire du serveur EmailJS. Réessayez dans quelques minutes.";
         }
       }
       
+      // Affichage de l'erreur avec plus de détails
       toast({
-        title: "Erreur lors de l'envoi",
+        title: errorTitle,
         description: errorMessage,
         variant: "destructive"
+      });
+      
+      // Log détaillé pour le débogage
+      console.log('📋 Analyse de l\'erreur EmailJS:', {
+        errorType: error instanceof Error ? error.name : 'Unknown',
+        errorMessage: error instanceof Error ? error.message : String(error),
+        errorStack: error instanceof Error ? error.stack : undefined,
+        timestamp: new Date().toISOString(),
+        userAgent: navigator.userAgent
       });
     } finally {
       setIsSubmitting(false);
@@ -120,13 +147,48 @@ const Contact = () => {
           variant: "default"
         });
       } else {
-        // Affichage de l'erreur (version simplifiée)
+        // Affichage détaillé de l'erreur de diagnostic
         console.error('❌ Diagnostic EmailJS échoué:', diagnostic);
+        
+        // Message d'erreur plus informatif
+        let diagnosticMessage = "Vérifiez la console pour plus de détails.";
+        
+        // Vérification de type pour éviter les erreurs TypeScript
+        if ('error' in diagnostic && diagnostic.error && 'type' in diagnostic.error) {
+          switch (diagnostic.error.type) {
+            case 'Erreur Service ID':
+              diagnosticMessage = "Le Service ID EmailJS est invalide ou le service est inactif.";
+              break;
+            case 'Erreur Template ID':
+              diagnosticMessage = "Le Template ID EmailJS est invalide ou le template est inactif.";
+              break;
+            case 'Erreur Public Key':
+              diagnosticMessage = "La Public Key EmailJS est invalide ou désactivée.";
+              break;
+            case 'Quota dépassé':
+              diagnosticMessage = "Limite d'emails EmailJS atteinte pour aujourd'hui.";
+              break;
+            case 'Erreur réseau':
+              diagnosticMessage = "Problème de connexion internet ou serveur EmailJS.";
+              break;
+            default:
+              diagnosticMessage = 'message' in diagnostic.error ? diagnostic.error.message : "Erreur inconnue lors du diagnostic.";
+          }
+        }
         
         toast({
           title: "❌ Diagnostic EmailJS échoué",
-          description: "Vérifiez la console pour plus de détails.",
+          description: diagnosticMessage,
           variant: "destructive"
+        });
+        
+        // Log détaillé du diagnostic
+        console.log('🔍 Diagnostic EmailJS détaillé:', {
+          success: diagnostic.success,
+          error: 'error' in diagnostic ? diagnostic.error : undefined,
+          config: 'config' in diagnostic ? diagnostic.config : undefined,
+          recommendations: 'recommendations' in diagnostic ? diagnostic.recommendations : undefined,
+          timestamp: new Date().toISOString()
         });
       }
     } catch (error) {
