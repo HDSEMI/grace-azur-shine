@@ -1,12 +1,11 @@
 import { useState } from 'react';
-import { Phone, Mail, MessageCircle, Send, Clock, MapPin, Loader2, TestTube } from 'lucide-react';
+import { Phone, Mail, MessageCircle, Send, Clock, MapPin, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import emailjs from '@emailjs/browser';
-import { testEmailJS } from '../utils/emailjs-test';
-import { diagnoseEmailJS, checkEmailJSConfig } from '../utils/emailjs-diagnostic';
+
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -130,76 +129,7 @@ const Contact = () => {
     window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
   };
 
-  // Fonction de diagnostic EmailJS simplifiée
-  const handleDiagnoseEmailJS = async () => {
-    try {
-      // 1. Vérification de la configuration
-      const configCheck = checkEmailJSConfig();
-      console.log('🔍 Vérification de la configuration:', configCheck);
-      
-      // 2. Diagnostic complet EmailJS
-      const diagnostic = await diagnoseEmailJS();
-      
-      if (diagnostic.success) {
-        toast({
-          title: "✅ Diagnostic EmailJS réussi !",
-          description: "La configuration EmailJS fonctionne parfaitement.",
-          variant: "default"
-        });
-      } else {
-        // Affichage détaillé de l'erreur de diagnostic
-        console.error('❌ Diagnostic EmailJS échoué:', diagnostic);
-        
-        // Message d'erreur plus informatif
-        let diagnosticMessage = "Vérifiez la console pour plus de détails.";
-        
-        // Vérification de type pour éviter les erreurs TypeScript
-        if ('error' in diagnostic && diagnostic.error && 'type' in diagnostic.error) {
-          switch (diagnostic.error.type) {
-            case 'Erreur Service ID':
-              diagnosticMessage = "Le Service ID EmailJS est invalide ou le service est inactif.";
-              break;
-            case 'Erreur Template ID':
-              diagnosticMessage = "Le Template ID EmailJS est invalide ou le template est inactif.";
-              break;
-            case 'Erreur Public Key':
-              diagnosticMessage = "La Public Key EmailJS est invalide ou désactivée.";
-              break;
-            case 'Quota dépassé':
-              diagnosticMessage = "Limite d'emails EmailJS atteinte pour aujourd'hui.";
-              break;
-            case 'Erreur réseau':
-              diagnosticMessage = "Problème de connexion internet ou serveur EmailJS.";
-              break;
-            default:
-              diagnosticMessage = 'message' in diagnostic.error ? diagnostic.error.message : "Erreur inconnue lors du diagnostic.";
-          }
-        }
-        
-        toast({
-          title: "❌ Diagnostic EmailJS échoué",
-          description: diagnosticMessage,
-          variant: "destructive"
-        });
-        
-        // Log détaillé du diagnostic
-        console.log('🔍 Diagnostic EmailJS détaillé:', {
-          success: diagnostic.success,
-          error: 'error' in diagnostic ? diagnostic.error : undefined,
-          config: 'config' in diagnostic ? diagnostic.config : undefined,
-          recommendations: 'recommendations' in diagnostic ? diagnostic.recommendations : undefined,
-          timestamp: new Date().toISOString()
-        });
-      }
-    } catch (error) {
-      console.error('Erreur lors du diagnostic:', error);
-      toast({
-        title: "Erreur de diagnostic",
-        description: "Vérifiez la console pour plus de détails.",
-        variant: "destructive"
-      });
-    }
-  };
+
   
   return <section id="contact" className="luxury-section bg-background pt-20 sm:pt-64 md:pt-24 lg:pt-28">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -308,16 +238,7 @@ const Contact = () => {
                     )}
                   </Button>
                   
-                  {/* Bouton de diagnostic EmailJS */}
-                  <Button 
-                    type="button" 
-                    onClick={handleDiagnoseEmailJS}
-                    className="btn-outline w-full"
-                    variant="outline"
-                  >
-                    <TestTube className="w-4 h-4 mr-2" />
-                    Diagnostiquer EmailJS
-                  </Button>
+
                 </div>
               </form>
             </div>

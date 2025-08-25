@@ -74,7 +74,7 @@ const Header = () => {
                 className="logo-button p-1"
                 aria-label="Retour à l'accueil"
               >
-                <img src="/lovable-uploads/3a1513b6-4169-4bc6-b946-89480b3739de.png" alt="Grace Azur Services Logo" className="h-16 w-auto" />
+                <img src="/lovable-uploads/3a1513b6-4169-4bc6-b946-89480b3739de.png" alt="Grace Azur Services Logo" className="h-20 w-20" />
               </button>
             </div>
 
