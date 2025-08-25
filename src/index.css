@@ -74,6 +74,12 @@
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Header height for spacing calculations */
+    --header-height: 4rem; /* 64px */
+    --header-height-sm: 4.5rem; /* 72px */
+    --header-height-md: 5rem; /* 80px */
+    --header-height-lg: 5.5rem; /* 88px */
   }
 
   .dark {
@@ -210,6 +216,48 @@
   .phone-link:active {
     @apply scale-95 transition-transform;
   }
+
+  /* Contact Section Mobile Optimizations */
+  .contact-section-mobile {
+    @apply pt-24 sm:pt-28 md:pt-32 lg:pt-36;
+  }
+  
+  .contact-title-mobile {
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight;
+  }
+  
+  .contact-subtitle-mobile {
+    @apply text-base sm:text-lg md:text-xl px-2;
+  }
+  
+  .contact-form-mobile {
+    @apply space-y-4 sm:space-y-6;
+  }
+  
+  .contact-input-mobile {
+    @apply text-sm sm:text-base;
+  }
+  
+  .contact-textarea-mobile {
+    @apply h-24 sm:h-32 text-sm sm:text-base;
+  }
+
+  /* Header-aware spacing utilities */
+  .below-header {
+    padding-top: calc(var(--header-height) + 2rem);
+  }
+  
+  .below-header-sm {
+    padding-top: calc(var(--header-height-sm) + 2rem);
+  }
+  
+  .below-header-md {
+    padding-top: calc(var(--header-height-md) + 2rem);
+  }
+  
+  .below-header-lg {
+    padding-top: calc(var(--header-height-lg) + 2rem);
+  }
 }
 
 /* Mobile-First Responsive Hero Improvements */
@@ -230,6 +278,36 @@
   .luxury-section {
     @apply py-12 px-4;
   }
+
+  /* Contact section mobile optimizations */
+  .contact-section-mobile {
+    @apply pt-20;
+  }
+  
+  .contact-title-mobile {
+    @apply text-2xl leading-tight;
+  }
+  
+  .contact-subtitle-mobile {
+    @apply text-base px-2;
+  }
+  
+  .contact-form-mobile {
+    @apply space-y-4;
+  }
+  
+  .contact-input-mobile {
+    @apply text-sm;
+  }
+  
+  .contact-textarea-mobile {
+    @apply h-20 text-sm;
+  }
+
+  /* Header-aware spacing on mobile */
+  .below-header {
+    padding-top: calc(var(--header-height) + 1rem);
+  }
 }
 
 /* Ensure minimum text sizes for readability */
@@ -240,6 +318,24 @@
   
   .font-body {
     font-size: clamp(0.875rem, 4vw, 1rem);
+  }
+
+  /* Contact section extra small mobile */
+  .contact-section-mobile {
+    @apply pt-16;
+  }
+  
+  .contact-title-mobile {
+    @apply text-xl leading-tight;
+  }
+  
+  .contact-subtitle-mobile {
+    @apply text-sm px-1;
+  }
+
+  /* Header-aware spacing on extra small mobile */
+  .below-header {
+    padding-top: calc(var(--header-height) + 0.5rem);
   }
 }
 

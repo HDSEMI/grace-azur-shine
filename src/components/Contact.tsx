@@ -139,28 +139,28 @@ const Contact = () => {
     }
   };
   
-  return <section id="contact" className="luxury-section bg-background pt-24">
+  return <section id="contact" className="luxury-section bg-background pt-20 sm:pt-64 md:pt-24 lg:pt-28">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 sm:mb-16 animate-fade-up">
-          <h2 className="font-title text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-4">
+        <div className="text-center mb-10 sm:mb-12 md:mb-16 animate-fade-up px-2 mt-12 sm:mt-16">
+          <h2 className="font-title text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-5 leading-tight">
             Contactez-nous
           </h2>
-          <p className="font-body text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="font-body text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-2">
             Demandez votre devis gratuit et personnalisé en quelques clics
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16">
           {/* Contact Form */}
           <div className="animate-fade-up">
             <div className="service-card">
-              <h3 className="font-title text-xl sm:text-2xl font-bold text-foreground mb-6">
+              <h3 className="font-title text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-4 sm:mb-6">
                 Demander un devis
               </h3>
               
 
               
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                 <div>
                   <label htmlFor="name" className="block font-body font-medium text-foreground mb-2 text-sm sm:text-base">
                     Nom complet *
@@ -179,7 +179,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block font-body font-medium text-foreground mb-2">
+                  <label htmlFor="email" className="block font-body font-medium text-foreground mb-2 text-sm sm:text-base">
                     Email *
                   </label>
                   <Input 
@@ -189,14 +189,14 @@ const Contact = () => {
                     value={formData.email} 
                     onChange={handleChange} 
                     required 
-                    className="w-full" 
+                    className="w-full text-sm sm:text-base" 
                     placeholder="votre.email@exemple.com"
                     disabled={isSubmitting}
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block font-body font-medium text-foreground mb-2">
+                  <label htmlFor="phone" className="block font-body font-medium text-foreground mb-2 text-sm sm:text-base">
                     Téléphone
                   </label>
                   <Input 
@@ -205,14 +205,14 @@ const Contact = () => {
                     name="phone" 
                     value={formData.phone} 
                     onChange={handleChange} 
-                    className="w-full" 
+                    className="w-full text-sm sm:text-base" 
                     placeholder="0 765 169 106"
                     disabled={isSubmitting}
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block font-body font-medium text-foreground mb-2">
+                  <label htmlFor="message" className="block font-body font-medium text-foreground mb-2 text-sm sm:text-base">
                     Message *
                   </label>
                   <Textarea 
@@ -221,7 +221,7 @@ const Contact = () => {
                     value={formData.message} 
                     onChange={handleChange} 
                     required 
-                    className="w-full h-32" 
+                    className="w-full h-24 sm:h-32 text-sm sm:text-base" 
                     placeholder="Décrivez votre besoin : type de logement, surface, fréquence souhaitée..."
                     disabled={isSubmitting}
                   />
