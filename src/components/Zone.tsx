@@ -24,7 +24,7 @@ const Zone = () => {
             <div className="relative">
               <div className="w-full h-96 bg-card rounded-xl shadow-card border border-border/50 flex items-center justify-center">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d182867.51825987147!2d6.928194!3d43.623647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cdd2b52e6d8539%3A0x40819a5fd970220!2sAntibes%2C%20France!5e0!3m2!1sfr!2sfr!4v1659000000000!5m2!1sfr!2sfr"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d182867.51825987147!2d5.8613734!3d43.3876711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13!1!3m3!1m2!1s0x12cebc738732d97f%3A0x594966412c5651c0!2sFrench%20Riviera!5e0!3m2!1sfr!2sfr!4v1659000000000!5m2!1sfr!2sfr"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

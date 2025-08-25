@@ -121,7 +121,7 @@ const Header = () => {
                 </a>
                 <div className="flex items-center space-x-2 text-sm text-muted-foreground pt-2">
                   <Phone size={16} />
-                  <span className="font-body">06 XX XX XX XX</span>
+                  <span className="font-body">0 765 169 106</span>
                 </div>
                 <Button onClick={() => window.location.href = '/contact'} className="btn-hero w-full">
                   Contact

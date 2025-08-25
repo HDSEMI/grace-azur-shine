@@ -254,7 +254,7 @@ const Tarifs = () => {
                         value={formData.phone}
                         onChange={handleChange}
                         className="w-full"
-                        placeholder="06 XX XX XX XX"
+                        placeholder="0 765 169 106"
                       />
                     </div>
                     <div>
@@ -350,13 +350,13 @@ const Tarifs = () => {
                   Ou contactez-nous directement
                 </h3>
                 <div className="flex flex-wrap justify-center gap-6">
-                  <a href="tel:06XXXXXXXX" className="flex items-center space-x-2 text-primary hover:text-primary/90 transition-smooth">
+                  <a href="tel:0765169106" className="flex items-center space-x-2 text-primary hover:text-primary/90 transition-smooth">
                     <Phone className="w-5 h-5" />
-                    <span className="font-body font-medium">06 XX XX XX XX</span>
+                    <span className="font-body font-medium">0 765 169 106</span>
                   </a>
-                  <a href="mailto:contact@graceazurservices.fr" className="flex items-center space-x-2 text-primary hover:text-primary/90 transition-smooth">
+                  <a href="mailto:graceazurservices@gmail.com" className="flex items-center space-x-2 text-primary hover:text-primary/90 transition-smooth">
                     <Mail className="w-5 h-5" />
-                    <span className="font-body font-medium">contact@graceazurservices.fr</span>
+                    <span className="font-body font-medium">graceazurservices@gmail.com</span>
                   </a>
                   <a href="https://wa.me/33XXXXXXXXX" className="flex items-center space-x-2 text-accent hover:text-accent/90 transition-smooth">
                     <MessageCircle className="w-5 h-5" />
