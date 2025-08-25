@@ -102,7 +102,13 @@ const Header = () => {
             <div className="hidden lg:flex items-center space-x-4">
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Phone size={16} />
-                <span className="font-body">07 65 16 91 06</span>
+                <a 
+                  href="tel:0765169106" 
+                  className="font-body phone-link"
+                  aria-label="Appeler le 07 65 16 91 06"
+                >
+                  07 65 16 91 06
+                </a>
               </div>
               <Button onClick={() => window.location.href = '/contact'} className="btn-hero">
                 Contact
@@ -138,7 +144,13 @@ const Header = () => {
                 </a>
                 <div className="flex items-center space-x-2 text-sm text-muted-foreground pt-2">
                   <Phone size={16} />
-                  <span className="font-body">0 765 169 106</span>
+                  <a 
+                    href="tel:0765169106" 
+                    className="font-body phone-link"
+                    aria-label="Appeler le 0 765 169 106"
+                  >
+                    0 765 169 106
+                  </a>
                 </div>
                 <Button onClick={() => window.location.href = '/contact'} className="btn-hero w-full">
                   Contact
