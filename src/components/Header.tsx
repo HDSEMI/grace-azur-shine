@@ -52,13 +52,30 @@ const Header = () => {
     });
     setIsMenuOpen(false);
   };
+
+  const navigateToHome = () => {
+    if (location.pathname === '/') {
+      // Si déjà sur la page d'accueil, scroll vers le haut
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      // Sinon, naviguer vers la page d'accueil
+      window.location.href = '/';
+    }
+    setIsMenuOpen(false);
+  };
   return <>
       <header className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border/50 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="flex items-center">
-              <img src="/lovable-uploads/3a1513b6-4169-4bc6-b946-89480b3739de.png" alt="Grace Azur Services Logo" className="h-16 w-auto" />
+              <button 
+                onClick={navigateToHome}
+                className="logo-button p-1"
+                aria-label="Retour à l'accueil"
+              >
+                <img src="/lovable-uploads/3a1513b6-4169-4bc6-b946-89480b3739de.png" alt="Grace Azur Services Logo" className="h-16 w-auto" />
+              </button>
             </div>
 
             {/* Desktop Navigation */}
