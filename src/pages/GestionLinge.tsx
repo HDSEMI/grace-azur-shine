@@ -210,8 +210,14 @@ const GestionLinge = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-title text-3xl md:text-4xl font-bold text-primary mb-8">
-              Pourquoi choisir notre service ?
+              Gestion du linge
             </h2>
+            <p className="font-body text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
+              Notre service inclut la prise en charge complète du linge : draps, housses de couette, taies d'oreiller et serviettes. Après chaque séjour, nous collectons, lavons, séchons et repassons le linge, puis le mettons en place avec soin. Ainsi, vos hôtes profitent de literie fraîche et parfaitement présentée, renforçant la qualité perçue de votre logement.
+            </p>
+            <h3 className="font-title text-2xl md:text-3xl font-bold text-primary mb-8">
+              Pourquoi choisir notre service ?
+            </h3>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="p-6 bg-background rounded-xl border border-border/50">
                 <h3 className="font-title text-xl font-bold text-foreground mb-3">
