@@ -16,7 +16,7 @@ const __dirname = path.dirname(__filename);
 console.log('🎨 Génération des favicons pour Grace Azur Services...');
 
 // Vérifier que le logo source existe
-const logoSource = path.join(__dirname, '../public/lovable-uploads/3a1513b6-4169-4bc6-b946-89480b3739de.png');
+const logoSource = path.join(__dirname, '../public/brand-uploads/3a1513b6-4169-4bc6-b946-89480b3739de.png');
 const publicDir = path.join(__dirname, '../public');
 
 if (!fs.existsSync(logoSource)) {

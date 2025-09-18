@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="animate-fade-up">
             <div className="mb-4">
               <img 
-                src="/lovable-uploads/3a1513b6-4169-4bc6-b946-89480b3739de.png" 
+                src="/brand-uploads/3a1513b6-4169-4bc6-b946-89480b3739de.png" 
                 alt="Grace Azur Services" 
                 className="h-[90px] w-auto"
               />
